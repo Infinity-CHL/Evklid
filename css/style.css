@@ -509,7 +509,7 @@ html {
     margin-bottom: 41px;
 }
 
-.faq-container__item {
+.faq-container__link {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -523,16 +523,20 @@ html {
     transition-duration: .1s;
     transition-timing-function: linear;
 }
-.faq-container__item {
+.faq-container__link {
     margin-top: -1px;
     cursor: pointer;
 }
 
-.faq-container__item:first-child {
+.faq-container__item:first-child .faq-container__link {
     border-top: var(--border);
 }
 
-.faq-container__item:hover {
+.faq-container__item:first-child .faq-container__link:hover {
+    border-top: 1px solid #ff9900;
+}
+
+.faq-container__link:hover {
     color: #ff9900;
     border-top: 1px solid #ff9900;
     border-bottom: 1px solid #ff9900;
@@ -542,22 +546,41 @@ html {
     transition: fill .1s linear;
 }
 
-.faq-container__item:hover .faq-container__svg ellipse {
+.faq-container__link:hover .faq-container__svg ellipse {
     fill: #ff9900;
 }
 
-.faq-container__item:hover .faq-container__svg path {
+.faq-container__link:hover .faq-container__svg path {
     fill: #fff;
 }
 
-.faq-container__item:focus .faq-container__svg ellipse {
+.faq-container__link:focus {
+    outline: none;
+    color: #ff9900;
+    border-top: 1px solid #ff9900;
+    border-bottom: 1px solid #ff9900;
+}
+
+.faq-container__item:first-child .faq-container__link:focus {
+    border-top: 1px solid #ff9900;
+}
+
+.faq-container__link:focus .faq-container__svg ellipse {
     outline: none;
     fill: #ff9900;
 }
 
-.faq-container__item:focus .faq-container__svg path {
+.faq-container__link:focus .faq-container__svg path {
     outline: none;
     fill: #fff;
+}
+
+.faq-container__svg svg {
+    transition: transform .2s linear;
+}
+
+.faq-container__link:active svg {
+    transform: rotateZ(45deg);
 }
 
 
