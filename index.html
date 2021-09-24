@@ -7,11 +7,20 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.png" type="img/png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <title>Evklid</title>
 </head>
 <body>
     <header class="header">
         <div class="container header-container">
+            <button class="header__burger btn btn-reset nav-burger">
+                <svg class="nav-burger__svg" width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="3" fill="#333333" />
+                    <rect y="10" width="30" height="3" fill="#333333" />
+                    <rect y="20" width="30" height="3" fill="#333333" />
+                </svg>
+            </button>
             <a href="#" class="header-container__link">
                 <img class="header-container__logo" src="img/Logo.svg" alt="Логотип сайта Эвклид">
             </a>
@@ -48,15 +57,30 @@
     <main class="main">
         
             <section class="hero">
-                <div class="container">
-                    <div class="hero__content">
-                        <h1 class="hero__title">Проектные решения любой сложности</h1>
-                        <p class="hero__descr">
-                            Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом
-                            проектантов
-                        </p>
-                        <button class="hero__btn  btn btn-reset">Заказать расчёт</button>
-                    </div>
+                <div class="container hero__container">
+                    
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide slide-1"></div>
+                                <div class="swiper-slide slide-2"></div>
+                                <div class="swiper-slide slide-3"></div>
+                              
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination-bull"></div>
+                        </div>
+
+                        <div class="hero__content">
+                            <h1 class="hero__title">Проектные решения любой сложности</h1>
+                            <p class="hero__descr">
+                                Есть над чем задуматься: базовые сценарии&nbsp;поведения&nbsp;пользователей и по сей день остаются уделом
+                                проектантов
+                            </p>
+                            <button class="hero__btn  btn btn-reset">Заказать расчёт</button>
+                        </div>
                 </div>
             </section>
 
@@ -64,21 +88,23 @@
                 <div class="container about-container">
                     <h2 class="section-title about-container__title">О нас</h2>
                     <p class="about-container__descr section-text">
-                            Также как перспективное планирование создаёт необходимость включения в&nbsp;производственный план целого ряда
+                            Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда
                         внеочередных мероприятий с&nbsp;учётом комплекса экспериментов, поражающих по&nbsp;своей масштабности
-                        и&nbsp;грандиозности. А&nbsp;также диаграммы связей могут быть описаны максимально подробно. Мы&nbsp;вынуждены
+                        и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены
                         отталкиваться от&nbsp;того, что убеждённость некоторых оппонентов требует от&nbsp;нас анализа как самодостаточных, так
-                        и&nbsp;внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта
-                        предопределяет высокую востребованность позиций, занимаемых участниками в&nbsp;отношении поставленных задач.
-                        Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что высококачественный прототип будущего проекта способствует повышению
+                        и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта
+                        предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач.
+                        Мы вынуждены отталкиваться от&nbsp;того, что высококачественный прототип будущего проекта способствует повышению
                         качества экспериментов.
                     </p>
                     <div class="about-container__content">
-                        <div class="about-container__content-left">
+                        <div class="about-container__left">
+                            <div class="about-container__content-left">
+                            </div>
                             <div class="about-container__bottom about-bottom">
                                 <p class="about-bottom__descr">
-                                    Принимая во&nbsp;внимание показатели успешности, перспективное планирование способствует подготовке
-                                    и&nbsp;реализации
+                                    Принимая во внимание показатели успешности, перспективное планирование способствует подготовке
+                                    и реализации
                                     новых принципов.
                                 </p>
                                 <button class="about-bottom__btn btn btn-reset">Подробнее</button>
@@ -87,7 +113,7 @@
                         <div class="about-container__content-right content-right">
                             <ul class="content-right__list list-reset">
                                 <li class="content-right__item item-bg1">
-                                    <h3 class="content-right__title">Консультация с&nbsp;широким активом</h3>
+                                    <h3 class="content-right__title">Консультация с широким активом</h3>
                                     <p class="content-right__descr section-text">
                                         А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных,
                                         так и внешне
@@ -114,29 +140,85 @@
                     <nav class="work-container__nav">
                         <ul class="work-container__list list-reset">
                             <li class="work-container__item">
-                                <button class="work-container__button btn-reset">1 шаг</button>
+                                <button class="work-container__button btn-reset" data-path="one">1 шаг</button>
                             </li>
                             <li class="work-container__item">
-                                <button class="work-container__button btn-reset">2 шаг</button>
+                                <button class="work-container__button btn-reset" data-path="twoo">2 шаг</button>
                             </li>
                             <li class="work-container__item">
-                                <button class="work-container__button btn-reset">3 шаг</button>
+                                <button class="work-container__button btn-reset" data-path="three">3 шаг</button>
                             </li>
                             <li class="work-container__item">
-                                <button class="work-container__button btn-reset">4 шаг</button>
+                                <button class="work-container__button btn-reset" data-path="four">4 шаг</button>
                             </li>
                         </ul>
                     </nav>
-                    <div class="work-container__content work-content">
-                            <h3 class="work-content__title">Проводим консультацию</h3>
-                            <p class="work-content__text section-text">
-                                Влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, призваны к&nbsp;ответу.
-                            </p>
+                            <div class="work-container__content work-content work-content-active" data-target="one">
+                                <div class="work-content__left">
+                                    <h3 class="work-content__title">Проводим консультацию</h3>
+                                    <p class="work-content__text section-text">
+                                        Влечет за&nbsp;собой процесс внедрения и модернизации приоритизации разума над эмоциями. В&nbsp;рамках
+                                        спецификации
+                                        современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими
+                                        инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически,
+                                        ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные
+                                        с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,
+                                        стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности
+                                        картины
+                                        в&nbsp;целом, однако конкретные выводы, разумеется, призваны к ответу.
+                                    </p>
+                                </div>
+                                <div class="work-content__right work-container__tab-one"></div>
+                            </div>
                             <div class="work-content__bottom">
                                 <button class="work-content__bottom-btn btn btn-reset">Подробнее</button>
                                 <button class="work-content__bottom-btn btn btn-reset">Договор</button>
                             </div>
                     </div>
+
+                    <div class="work-container__content work-content work-content-active" data-target="twoo">
+                        <div class="work-content__left">
+                            <h3 class="work-content__title">Составляем смету</h3>
+                            <p class="work-content__text section-text">
+                                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые
+                                особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители
+                                современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления.
+                                Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты
+                                целой серии независимых исследований.
+                            </p>
+                        </div>
+                        <div class="work-content__right work-container__tab-twoo"></div>
+                    </div>
+
+                    <div class="work-container__content work-content work-content-active" data-target="three">
+                        <div class="work-content__left">
+                            <h3 class="work-content__title">Привлекаем подрядчиков</h3>
+                            <p class="work-content__text section-text">
+                                Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса
+                                профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким
+                                доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений
+                                развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях
+                                системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское
+                                обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+                            </p>
+                        </div>
+                        <div class="work-content__right work-container__tab-three"></div>
+                    </div>
+
+                    <div class="work-container__content work-content work-content-active" data-target="four">
+                        <div class="work-content__left">
+                            <h3 class="work-content__title">Инспектируем все этапы работ</h3>
+                            <p class="work-content__text section-text">
+                            Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
+                            высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и
+                            богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового
+                            участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей
+                            деятельности позволяет.
+                            </p>
+                        </div>
+                        <div class="work-content__right work-container__tab-four"></div>
+                    </div>
+
                 </div>
             </section>
 
@@ -162,7 +244,7 @@
                             <li class="faq-container__item">
                                     <a href="#" class="faq-container__link">
                                         <h3 class="faq-container__heading">
-                                        У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;<span class="slash">/</span> реализовать?
+                                        У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать <span class="slash">/</span> реализовать?
                                     </h3>
                                     <span class="faq-container__svg">
                                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +274,7 @@
                             <li class="faq-container__item">
                                     <a href="#" class="faq-container__link">
                                         <h3 class="faq-container__heading">
-                                        Могу ли я делегировать вам работу <span class="slash">/</span> согласование с подрядчиком <span
+                                        Могу ли я делегировать вам работу <span class="slash">/</span> согласование с&nbsp;подрядчиком <span
                                             class="slash">/</span> организацией?
                                     </h3>
                                     <span class="faq-container__svg">
@@ -208,7 +290,7 @@
                             <li class="faq-container__item">
                                     <a href="#" class="faq-container__link">
                                         <h3 class="faq-container__heading">
-                                        Могу ли я вернуть деньги на каком-либо из этапов работ?
+                                        Могу ли я вернуть деньги на&nbsp;каком-либо из этапов работ?
                                     </h3>
                                     <span class="faq-container__svg">
                                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -322,5 +404,7 @@
                 
             </div>
         </footer>
+        <script src="js/slider.js"></script>
+        <script src="js/tabs.js"></script>
 </body>
 </html>
