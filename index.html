@@ -14,7 +14,32 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <button class="header__burger btn btn-reset nav-burger">
+            <div id="header__menu" class="header__menu menu">
+                <button class="menu__btn btn-reset">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#333333"/>
+                        <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#333333"/>
+                        </svg>                        
+                </button>
+                <ul class="menu__list list-reset">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Проекты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Этапы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Отзывы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="header__burger btn btn-reset nav-burger" id="header__burger">
                 <svg class="nav-burger__svg" width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="30" height="3" fill="#333333" />
                     <rect y="10" width="30" height="3" fill="#333333" />
@@ -54,6 +79,7 @@
             </button>
         </div>
     </header>
+
     <main class="main">
         
             <section class="hero">
@@ -76,7 +102,7 @@
                         <div class="hero__content">
                             <h1 class="hero__title">Проектные решения любой сложности</h1>
                             <p class="hero__descr">
-                                Есть над чем задуматься: базовые сценарии&nbsp;поведения&nbsp;пользователей и по сей день остаются уделом
+                                Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом
                                 проектантов
                             </p>
                             <button class="hero__btn  btn btn-reset">Заказать расчёт</button>
@@ -143,7 +169,7 @@
                                 <button class="work-container__button btn-reset" data-path="one">1 шаг</button>
                             </li>
                             <li class="work-container__item">
-                                <button class="work-container__button btn-reset" data-path="twoo">2 шаг</button>
+                                <button class="work-container__button btn-reset" data-path="two">2 шаг</button>
                             </li>
                             <li class="work-container__item">
                                 <button class="work-container__button btn-reset" data-path="three">3 шаг</button>
@@ -153,72 +179,70 @@
                             </li>
                         </ul>
                     </nav>
-                            <div class="work-container__content work-content work-content-active" data-target="one">
-                                <div class="work-content__left">
-                                    <h3 class="work-content__title">Проводим консультацию</h3>
-                                    <p class="work-content__text section-text">
-                                        Влечет за&nbsp;собой процесс внедрения и модернизации приоритизации разума над эмоциями. В&nbsp;рамках
-                                        спецификации
-                                        современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими
-                                        инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически,
-                                        ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные
-                                        с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,
-                                        стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности
-                                        картины
-                                        в&nbsp;целом, однако конкретные выводы, разумеется, призваны к ответу.
-                                    </p>
+
+                    <div class="tab-content tab-content-active" data-target='one'>
+                        <div class="tab-content__item">
+                            <div class="tab-content__left">
+                                <h2 class="tab-content__title">Проводим консультацию</h2>
+                                <p class="tab-content__descr">
+                                    Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+                                </p>
+                                <div class="tab__btns">
+                                    <button class="tab__btn btn-reset">Подробнее</button>
+                                    <button class="tab__btn btn-reset">Договор</button>
                                 </div>
-                                <div class="work-content__right work-container__tab-one"></div>
                             </div>
-                            <div class="work-content__bottom">
-                                <button class="work-content__bottom-btn btn btn-reset">Подробнее</button>
-                                <button class="work-content__bottom-btn btn btn-reset">Договор</button>
+                            <div class="tab-content__right"></div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" data-target='two'>
+                        <div class="tab-content__item">
+                            <div class="tab-content__left">
+                                <h2 class="tab-content__title">Составляем смету</h2>
+                                <p class="tab-content__descr">
+                                    Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+                                <div class="tab__btns">
+                                    <button class="tab__btn btn-reset">Подробнее</button>
+                                    <button class="tab__btn btn-reset">Договор</button>
+                                </div>
                             </div>
-                    </div>
-
-                    <div class="work-container__content work-content work-content-active" data-target="twoo">
-                        <div class="work-content__left">
-                            <h3 class="work-content__title">Составляем смету</h3>
-                            <p class="work-content__text section-text">
-                                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые
-                                особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители
-                                современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления.
-                                Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты
-                                целой серии независимых исследований.
-                            </p>
+                            <div class="tab-content__right" style="background-image: url(../Evklid/img/Rectangle\ 18.jpg);"></div>
                         </div>
-                        <div class="work-content__right work-container__tab-twoo"></div>
                     </div>
 
-                    <div class="work-container__content work-content work-content-active" data-target="three">
-                        <div class="work-content__left">
-                            <h3 class="work-content__title">Привлекаем подрядчиков</h3>
-                            <p class="work-content__text section-text">
-                                Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса
-                                профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким
-                                доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений
-                                развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях
-                                системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское
-                                обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
-                            </p>
+                    <div class="tab-content" data-target='three'>
+                        <div class="tab-content__item">
+                            <div class="tab-content__left">
+                                <h2 class="tab-content__title">Привлекаем подрядчиков</h2>
+                                <p class="tab-content__descr">
+                                    Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+                                </p>
+                                <div class="tab__btns">
+                                    <button class="tab__btn btn-reset">Подробнее</button>
+                                    <button class="tab__btn btn-reset">Договор</button>
+                                </div>
+                            </div>
+                            <div class="tab-content__right" style="background-image: url(../Evklid/img/Rectangle\ 19.jpg);"></div>
                         </div>
-                        <div class="work-content__right work-container__tab-three"></div>
                     </div>
 
-                    <div class="work-container__content work-content work-content-active" data-target="four">
-                        <div class="work-content__left">
-                            <h3 class="work-content__title">Инспектируем все этапы работ</h3>
-                            <p class="work-content__text section-text">
-                            Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
-                            высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и
-                            богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового
-                            участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей
-                            деятельности позволяет.
-                            </p>
+                    <div class="tab-content" data-target='four'>
+                        <div class="tab-content__item">
+                            <div class="tab-content__left">
+                                <h2 class="tab-content__title">Инспектируем все этапы работ</h2>
+                                <p class="tab-content__descr">
+                                    Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+                                </p>
+                                <div class="tab__btns">
+                                    <button class="tab__btn btn-reset">Подробнее</button>
+                                    <button class="tab__btn btn-reset">Договор</button>
+                                </div>
+                            </div>
+                            <div class="tab-content__right" style="background-image: url(../Evklid/img/Rectangle\ 20.jpg);"></div>
                         </div>
-                        <div class="work-content__right work-container__tab-four"></div>
                     </div>
-
+                            
                 </div>
             </section>
 
@@ -406,5 +430,6 @@
         </footer>
         <script src="js/slider.js"></script>
         <script src="js/tabs.js"></script>
+        <script src="js/burger.js"></script>
 </body>
 </html>
